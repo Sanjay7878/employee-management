@@ -1,16 +1,16 @@
 <section class="login_container">
   <div class="login_wrapper">
     <h1>Login</h1>
-    <div class="input_wrap">
+    <form class="input_wrap" [formGroup]="loginForm" (ngSubmit)="login()">
       <div class="input">
         <label for="email">Email ID:</label>
-        <input type="text" name="email" placeholder="xyz@example.com" autocomplete="false">
+        <input type="text" name="email" placeholder="xyz@example.com" formControlName="email" autocomplete="false">
       </div>
       <div class="input">
         <label for="password">Password</label>
-        <input type="password" name="password" autocomplete="false">
+        <input type="password" name="password" autocomplete="false" formControlName="password">
       </div>
       <button type="submit" class="primary-btn">Login</button>
-    </div>
+    </form>
   </div>
 </section>
