@@ -1,0 +1,43 @@
+.sideNav_container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 12px 20px 24px;
+  background-color: #fff;
+  width: 200px;
+  border-right: 1px solid #c5c3c3;
+  height: calc(100vh - 102px);
+
+  .top_nav, .bottom_nav{
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+  }
+}
+.nav{
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  cursor: pointer;
+
+  h3{
+    color: #04cd9c;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    margin: 0px;
+  }
+
+  .messages{
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+
+    span{
+      padding: 4px 8px;
+      background-color: #e6751c;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+    }
+  }
+}
