@@ -2,3 +2,38 @@
 body{
   margin: 0px;
 }
+
+
+.input{
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+
+  label{
+    color: black;
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  input{
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid #c5c3c3;
+  }
+}
+
+.primary-btn{
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  line-height: 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: #04cd9c;
+
+  &:hover{
+    background-color: #04cd9b72;
+  }
+}
