@@ -8,7 +8,7 @@
 
 .logo{
   width: 200px;
-  border-right: 1px solid #c5c3c3;
+  border-right: 1px solid var(--border);
   padding: 12px 12px 12px 0px;
   img{
     width: 150px;
@@ -43,7 +43,7 @@
   .menu-options{
     padding: 4px 16px;
     border-radius: 6px;
-    border: 1px solid #c5c3c3;
+    border: 1px solid var(--border);
     display: flex;
     align-items: center;
     column-gap: 8px;

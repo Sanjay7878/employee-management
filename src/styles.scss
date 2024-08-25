@@ -1,6 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 body{
   margin: 0px;
+  --primary_color: #04cd9c;
+  --secondary_color: #656569;
+  --border: #c5c3c3;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+  margin: 0px;
 }
 
 
@@ -31,7 +38,7 @@ body{
   border-radius: 8px;
   border: none;
   cursor: pointer;
-  background-color: #04cd9c;
+  background-color: var(--primary_color);
 
   &:hover{
     background-color: #04cd9b72;

@@ -1,0 +1,149 @@
+.dashboard_container{
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+
+  .top_section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p{
+      font-size: 14px;
+      color: black;
+    }
+  }
+
+  .bottom_section{
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+}
+
+.filter{
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  
+  .checkbox{
+    width: 10px;
+    height: 10px;
+    padding: 1px;
+    border: 2px solid var(--primary_color);
+    background-color: white;
+    position: relative;
+    cursor: pointer;
+
+    .tick{
+      position: absolute;
+      inset: 0;
+    }
+  }
+}
+
+.employee_card{
+  background-color: white;
+  border: 1px solid var(--border);
+  // width: 32%;
+}
+
+.detail{
+  padding: 16px 12px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+
+  p{
+    font-size: 14px;
+    color: var(--secondary_color);
+  }
+
+  &.employee{
+    flex-direction: column;
+  }
+
+  .profile{
+    display: flex;
+    column-gap: 8px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    width: 100%;
+
+    img{
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .name{
+      display: flex;
+      flex-direction: column;
+      row-gap: 12px;
+
+      h4, p{
+        margin: 0px;
+      }
+
+      p{
+        font-size: 14px;
+      }
+    }
+  }
+
+  .rating{
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+    width: 100%;
+    .stars{
+      display: flex;
+      align-items: center;
+      column-gap: 8px;
+    }
+  }
+
+  .share{
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &.emp-data{
+    justify-content: space-between;
+    column-gap: 24px;
+
+    .exp, .doj{
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      column-gap: 4px;
+    }
+  }
+
+  &.contact{
+    justify-content: space-between;
+    column-gap: 24px;
+    .call{
+      display: flex;
+      align-items: center;
+      column-gap: 4px;
+    }
+
+    .circle{
+      padding: 6px;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
