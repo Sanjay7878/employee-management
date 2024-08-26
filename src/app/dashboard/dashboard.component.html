@@ -11,7 +11,14 @@
     </div>
   </section>
   <section class="bottom_section">
-    <div class="employee_card">
+    <ng-container *ngIf="!allEmployee.length">
+      <div class="no-result-container">
+        <h1>No Employees Found</h1>
+        <button class="primary-btn" routerLink="/add-employee">Add Employee</button>
+      </div>
+    </ng-container>
+    
+    <!-- <div class="employee_card">
       <div class="detail employee">
         <div class="profile">
           <img src="assets/profiles/profile-1.webp" alt="">
@@ -72,6 +79,6 @@
           andrew&#64;infrrd.ai
         </div>
       </div>
-    </div>
+    </div> -->
   </section>
 </div>

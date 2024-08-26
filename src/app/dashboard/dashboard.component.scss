@@ -147,3 +147,17 @@
     }
   }
 }
+
+.no-result-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 40px;
+  flex-direction: column;
+  width: 100%;
+
+  h1{
+    color: rgb(183, 181, 181);
+    margin-bottom: 24px;
+  }
+}

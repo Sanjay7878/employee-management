@@ -12,5 +12,10 @@ export const layoutRoutes: Routes = [
     path: 'dashboard',
     loadComponent: () => import('../dashboard/dashboard.component').then(C => C.DashboardComponent),
     canActivate: [authGuard]
+  },
+  {
+    path: 'add-employee',
+    loadComponent: () => import('../add-employee/add-employee.component').then(C => C.AddEmployeeComponent),
+    canActivate: [authGuard]
   }
 ];
