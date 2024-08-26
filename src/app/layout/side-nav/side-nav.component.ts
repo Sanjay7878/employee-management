@@ -1,12 +1,24 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-side-nav',
   standalone: true,
-  imports: [],
+  imports: [
+    CommonModule
+  ],
   templateUrl: './side-nav.component.html',
   styleUrl: './side-nav.component.scss'
 })
 export class SideNavComponent {
 
+  currentTab: string = ''
+
+  onViewNav(nav: string){
+    this.currentTab = nav
+  }
+
+  collapseSearch(){
+    this.currentTab = ''
+  }
 }

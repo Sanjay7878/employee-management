@@ -1,15 +1,20 @@
 .header-container{
   background-color: #fff;
-  padding: 0px 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 1000;
+  position: relative;
 }
 
 .logo{
-  width: 200px;
+  width: 236px;
+  min-width: 236px;
+  max-width: 236px;
   border-right: 1px solid var(--border);
-  padding: 12px 12px 12px 0px;
+  div{
+    padding: 12px 12px 12px 24px;
+  }
   img{
     width: 150px;
     height: 34px;
@@ -20,7 +25,11 @@
   padding: 12px 0px;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  padding-right: 24px;
   column-gap: 24px;
+  width: 100%;
+  box-shadow: 4px 1px 15px 0px rgba(163, 163, 163, 0.631);
 
   .bell{
     position: relative;

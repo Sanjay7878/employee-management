@@ -2,23 +2,46 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20px 12px 20px 24px;
+  padding: 20px 0px;
   background-color: #fff;
-  width: 200px;
+  width: 236px;
+  min-width: 236px;
+  max-width: 236px;
   border-right: 1px solid #c5c3c3;
-  height: calc(100vh - 102px);
+  height: 100%;
+  position: relative;
 
   .top_nav, .bottom_nav{
     display: flex;
     flex-direction: column;
-    row-gap: 24px;
+    // row-gap: 24px;
+  }
+
+  .collapse{
+    position: absolute;
+    right: -12px;
+    top: 46%;
+    border: 1px solid var(--border);
+    z-index: 100;
+    background-color: white;
+    padding: 4px;
+    text-align: center;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
   }
 }
 .nav{
   display: flex;
   align-items: center;
   column-gap: 8px;
+  padding: 16px 12px 16px 24px;
   cursor: pointer;
+
+  &:hover,&.selected{
+    background-color: #a7e2d37d;
+  }
 
   h3{
     color: #04cd9c;
@@ -38,6 +61,94 @@
       color: #fff;
       font-size: 12px;
       font-weight: 600;
+    }
+  }
+}
+
+.sideNav_wrapper{
+  display: flex;
+  align-items: stretch;
+  height: calc(100vh - 102px);
+}
+
+.search_container{
+  width: 300px;
+  background-color: white;
+  height: 100%;
+  padding: 20px 0px;
+  border-right: 1px solid #c5c3c3;
+  transition: 0.3s ease-in linear;
+
+  &.expand{
+    animation: expand 0.3s ease-out;
+    display: block;
+  }
+
+  &.collapse{
+    animation: collapse-anim 0.3s ease-out;
+    display: none;
+  }
+}
+
+@keyframes expand {
+  0%{
+    width: 0px;
+  }
+  100%{
+    width: 300px;
+  }
+}
+
+@keyframes collapse-anim {
+  0%{
+    width: 300px;
+    display: block;
+  }
+  100%{
+    width: 0px;
+    display: none;
+  }
+}
+
+.form-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  row-gap: 24px;
+
+  .forms{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .selection{
+    padding: 16px;
+    border-bottom: 1px solid var(--border);
+
+    p{
+      color: var(--secondary_color);
+      margin-bottom: 12px;
+      font-size: 14px;
+    }
+
+    .value{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+
+  .actions{
+    display: flex;
+    column-gap: 16px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 16px;
+    
+    button{
+      width: 50%;
     }
   }
 }
