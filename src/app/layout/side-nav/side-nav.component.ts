@@ -13,7 +13,10 @@ import { Component } from '@angular/core';
 export class SideNavComponent {
 
   currentTab: string = ''
-
+  showDepartment: boolean = false;
+  allDepartments: string[] = ['Front End Development', 'Ml Engineering', 'Quality Analyst', 'Human Resource', 'Research & Development']
+  currentDepartment:string = 'Front End Development'
+  
   onViewNav(nav: string){
     this.currentTab = nav
   }

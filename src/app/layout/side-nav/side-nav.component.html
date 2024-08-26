@@ -64,15 +64,19 @@
   <section class="search_container" [class]="currentTab === 'search' ? 'expand': 'collapse'">
     <form class="form-container">
       <div class="forms">
-        <div class="selection">
+        <div class="selection custom_dropdown">
           <p>Department</p>
-          <div class="value">
-            <h4>Front End Development</h4>
+          <div class="value" (click)="showDepartment = !showDepartment">
+            <h4>{{currentDepartment}}</h4>
             <svg xmlns="http://www.w3.org/2000/svg" height="14" width="14" viewBox="0 0 512 512">
               <path fill="#b8b6b6" d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
             </svg>
           </div>
-          
+          <div class="options_wrapper" [class.active]="showDepartment">
+            <ng-container *ngFor="let item of allDepartments">
+              <p class="option" (click)="currentDepartment = item;showDepartment = false">{{item}}</p>
+            </ng-container>
+          </div>
         </div>
         <div class="selection">
           <p>Roll Type</p>

@@ -58,3 +58,33 @@ h1,h2,h3,h4,h5,h6,p{
   background-color: white;
   color: var(--primary_color);
 }
+
+.custom_dropdown{
+  position: relative;
+
+  .options_wrapper{
+    position: absolute;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: white;
+    border: 1px solid var(--border);
+    bottom: -203px;
+    left: 0px;
+    border-radius: 6px;
+    display: none;
+
+    .option{
+      cursor: pointer;
+    }
+
+    &.active{
+      display: block;
+    }
+
+    p{
+      font-size: 16px;
+      padding: 12px;
+    }
+  }
+}
