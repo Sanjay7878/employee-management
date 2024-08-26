@@ -1,1 +1,67 @@
-<p>add-employee works!</p>
+<form class="form_wrapper">
+ 
+  <div class="form-container">
+    <h2 class="heading">Add Employee</h2>
+    <div class="form-row">
+      <div class="input">
+        <label for="name">Name</label>
+        <input type="text" name="name" formControlName="name" autocomplete="false">
+      </div>
+      <div class="input">
+        <label for="organization">Company Name</label>
+        <input type="text" name="organization" autocomplete="false" formControlName="organization">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="input">
+        <label for="email">Email ID:</label>
+        <input type="text" name="email" placeholder="xyz@example.com" formControlName="email" autocomplete="false">
+      </div>
+      <div class="input">
+        <label for="contact">Contact No.</label>
+        <input type="number" name="contact" autocomplete="false" formControlName="contact">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="input">
+        <label>Designation</label>
+        <div class="custom_dropdown">
+          <div class="value" (click)="showDesingation = !showDesingation">
+            <p>Select Designation</p>
+            <svg xmlns="http://www.w3.org/2000/svg" height="14" width="14" viewBox="0 0 512 512">
+              <path fill="#b8b6b6" d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
+            </svg>
+          </div>
+          <div class="options_wrapper" [class.active]="showDesingation">
+            <ng-container *ngFor="let item of allDesignation">
+              <p class="option">{{item}}</p>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+      <div class="input">
+        <label>Avatar</label>
+        <div class="custom_dropdown">
+          <div class="value" (click)="showAvatar = !showAvatar">
+            <p>Select Avatar</p>
+            <svg xmlns="http://www.w3.org/2000/svg" height="14" width="14" viewBox="0 0 512 512">
+              <path fill="#b8b6b6" d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
+            </svg>
+          </div>
+          <div class="options_wrapper" [class.active]="showAvatar">
+            <ng-container *ngFor="let item of allAvatars;let i =index;">
+              <div class="option avatar-opt">
+                <img [src]="item" alt="">
+                Avatar {{i + 1}}
+              </div>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-row actions">
+      <button type="reset" class="outline-btn btn">Clear</button>
+      <button type="submit" class="primary-btn btn">Submit</button>
+    </div>
+  </div>
+</form>
