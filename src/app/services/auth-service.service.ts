@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
@@ -9,7 +10,9 @@ export class AuthService {
   private $isLoggedIn = new BehaviorSubject<boolean>(false)
   isLoggedIn = this.$isLoggedIn.asObservable()
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   login(data: any){
     window.localStorage.setItem('userData', JSON.stringify(data))
@@ -21,5 +24,11 @@ export class AuthService {
     if(login && login.email && login.password){
       this.$isLoggedIn.next(true)
     }
+  }
+
+  logout(){
+    window.localStorage.removeItem('userData')
+    this.router.navigate(['/'])
+    this.$isLoggedIn.next(false)
   }
 }

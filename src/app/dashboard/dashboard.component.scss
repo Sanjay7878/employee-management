@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   row-gap: 24px;
+  position: relative;
 
   .top_section{
     display: flex;
@@ -46,6 +47,7 @@
 .employee_card{
   background-color: white;
   border: 1px solid var(--border);
+  cursor: pointer;
   // width: 32%;
 }
 
@@ -160,4 +162,20 @@
     color: rgb(183, 181, 181);
     margin-bottom: 24px;
   }
+}
+
+.add-emp{
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background-color: var(--primary_color);
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  font-size: 24px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }

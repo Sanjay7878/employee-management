@@ -8,7 +8,7 @@ export const noAuthGuard: CanActivateFn = (route, state) => {
   const router = inject(Router)
 
   return authService.isLoggedIn.pipe(
-    tap((x)=>{
+    map((x)=>{
       if(x){
         router.navigate(['/dashboard'])
         return false

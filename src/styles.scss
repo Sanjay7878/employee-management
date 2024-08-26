@@ -10,6 +10,12 @@ h1,h2,h3,h4,h5,h6,p{
   margin: 0px;
 }
 
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0; 
+}
 
 .input{
   display: flex;
@@ -43,6 +49,28 @@ h1,h2,h3,h4,h5,h6,p{
 
   &:hover{
     background-color: #04cd9b72;
+  }
+
+  &:disabled{
+    cursor: not-allowed;
+    background-color: lightgrey;
+  }
+}
+
+.danger-btn{
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  line-height: 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(225, 60, 60);
+
+  &:hover{
+    background-color: rgba(225, 60, 60, 0.516);
   }
 }
 

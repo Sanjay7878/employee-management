@@ -17,5 +17,10 @@ export const layoutRoutes: Routes = [
     path: 'add-employee',
     loadComponent: () => import('../add-employee/add-employee.component').then(C => C.AddEmployeeComponent),
     canActivate: [authGuard]
+  },
+  {
+    path: 'add-employee/:id',
+    loadComponent: () => import('../add-employee/add-employee.component').then(C => C.AddEmployeeComponent),
+    canActivate: [authGuard]
   }
 ];
